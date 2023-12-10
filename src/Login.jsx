@@ -31,7 +31,12 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder="email" />
           <input type="password" placeholder="password" />
-          <button>Sign in</button>
+          <button style={{  backgroundColor: "black",
+        color: "white",
+        padding: "10px",
+        fontWeight:"bold",
+        border: "none",
+        cursor: "pointe"}}> Sign in</button>
           {err && <span>Something went wrong</span>}
         </form>
         <p style={{color:"white",  fontSize: "12px", marginTop: "10px"}}>You don't have an account? <Link to="/Signup" style={{color:"black"}}>Register</Link></p>
