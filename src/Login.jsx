@@ -26,7 +26,7 @@ const Login = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <span className="logo">Twerple</span>
+        <span className="logo" style={{ color:"white", fontWeight= "bold",  fontSize="24px"}}>Twerple</span>
         <span className="title">Login Form</span>
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder="email" />
@@ -34,7 +34,7 @@ const Login = () => {
           <button>Sign in</button>
           {err && <span>Something went wrong</span>}
         </form>
-        <p>You don't have an account? <Link to="/Signup" style={{color:"black"}}>Register</Link></p>
+        <p style={{color:"white",  fontSize: "12px", marginTop: "10px"}}>You don't have an account? <Link to="/Signup" style={{color:"black"}}>Register</Link></p>
       </div>
     </div>
   );
