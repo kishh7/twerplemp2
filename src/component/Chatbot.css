@@ -79,8 +79,8 @@
   border: 1px solid #ccc;
 }
 
-.chatbot-input button {
-  padding: 8px 15px;
+.chatbot-input .buttonsend {
+  padding: 10px 13px;
   border: none;
   border-radius: 3px;
   background-color: #52057B;

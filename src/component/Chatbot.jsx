@@ -77,7 +77,7 @@ const Chatbot = () => {
           </div>
           <form onSubmit={handleMessageSubmit} className="chatbot-input">
             <input type="text" name="message" placeholder="Type a message..." />
-            <button type="submit">Send</button>
+            <button className="buttonsend" type="submit">Send</button>
           </form>
         </div>
       ) : (
