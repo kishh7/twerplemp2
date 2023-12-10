@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../src/firebase";
-import './RegistrationForm.css';
+import { auth } from "./firebase";
+import './Login.css';
 
 
-const RegistrationForm = () => {
+const Login = () => {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
 
@@ -34,10 +34,10 @@ const RegistrationForm = () => {
           <button>Sign in</button>
           {err && <span>Something went wrong</span>}
         </form>
-        <p>You don't have an account? <Link to="/Signup">Register</Link></p>
+        <p>You don't have an account? <Link to="/Signup" style={{color:"black"}}>Register</Link></p>
       </div>
     </div>
   );
 };
 
-export default RegistrationForm;
+export default Login;

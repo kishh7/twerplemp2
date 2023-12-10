@@ -44,10 +44,11 @@ const Navigation = () => {
             <CFormInput type="search" placeholder="Search" />
                 <CButton type="submit" color="light"
                  variant="outline" className="ms-2"> Search </CButton>
-         </div>
-        <div className="login">
+                  <div className="login" style={{marginLeft: "5px"}}>
      <Button variant="outlined" href="/RegistrationForm">  LogIn </Button>
              </div>
+         </div>
+       
         </CForm>
             </CCollapse>
           </CContainer>

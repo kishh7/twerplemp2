@@ -46,7 +46,7 @@ const Signup = () => {
               photoURL: downloadURL,
             });
     
-       navigate('/RegistrationForm'); 
+       navigate('/'); 
     } catch (err) {
       setErr(true);
       setLoading(false);
@@ -81,7 +81,7 @@ const Signup = () => {
           {err && <span>Something went wrong</span>}
         </form>
         <p>
-          You do have an account? <Link to="/RegistrationForm">Login</Link>
+          You do have an account? <Link to="/" style={{color:"black"}}>Login</Link>
         </p>
       </div>
     </div>

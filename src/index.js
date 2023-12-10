@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './component/Navigation/Navigation';
 import Feed from './component/Feed';
 import Channel from './component/Channel';
-import RegistrationForm from './RegistrationForm';
 import About from './About';
 import Page1 from './component/channels/Page1';
 import Page2 from './component/channels/Page2';
@@ -20,6 +19,7 @@ import Page10 from './component/channels/Page10';
 import Pagefour from './component/channels/Pagefour';
 import Signup from './Signup';
 import Streamingtool from './Streamingtool';
+import Login from './Login';
 
 
 
@@ -30,11 +30,11 @@ ReactDOM.render(
     
     <Routes>
 
-    <Route path='/' element={<Feed/>}/>
+    <Route path='/Feed' element={<Feed/>}/>
     <Route path='/About' element={<About/>}/>
     <Route path='/Channel' element={<Channel/>}/>
     <Route path='/Streamingtool' element={<Streamingtool/>}/>
-    <Route path='/RegistrationForm' element={<RegistrationForm/>}/>
+    <Route path='/' element={<Login/>}/>
     <Route path='/Signup' element={<Signup/>}/>
     <Route path='/Page1' element={<Page1/>}/>
     <Route path='/Page2' element={<Page2/>}/>
