@@ -12,6 +12,8 @@
 .loginIconLink {
   display: flex; 
   color: purple;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 

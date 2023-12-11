@@ -31,8 +31,8 @@ ReactDOM.render(
     <Routes>
 
     <Route path='/' element={<Homepage/>}/>
-    <Route path='/Login' element={<Login/>}/>
     <Route path='/Signup' element={<Signup/>}/>
+    <Route path='/Login' element={<Login/>}/>
     <Route path='/Feed' element={<Feed/>}/>
     <Route path='/About' element={<About/>}/>
     <Route path='/Channel' element={<Channel/>}/>

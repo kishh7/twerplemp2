@@ -46,7 +46,7 @@ const Signup = () => {
               photoURL: downloadURL,
             });
     
-       navigate('/'); 
+       navigate('/Login'); 
     } catch (err) {
       setErr(true);
       setLoading(false);

@@ -11,16 +11,9 @@ const Navigation = () => {
     <>
     
       <CNavbar expand="lg" colorScheme="dark" className="navbar">
-        <CContainer fluid>
+        <CContainer fluid style={{display:"flex", alignItems:"center",justifyContent:"space-between"}}>
           <CNavbarBrand className="logo">Twer<span>p/e</span></CNavbarBrand>
-          <CNavbarToggler
-            aria-label="Toggle navigation"
-            aria-expanded={visible}
-            onClick={() => setVisible(!visible)}
-          />
-          <CCollapse className="navbar-collapse" visible={visible}>
-            <Link to="/Login" className="loginIconLink" ><LoginIcon/></Link>
-          </CCollapse>
+           <Link to="/Login" className="loginIconLink" ><LoginIcon/></Link>
         </CContainer>
       </CNavbar>
     </>
