@@ -76,7 +76,7 @@ const Signup = () => {
                             file
                                 ? URL.createObjectURL(file)
                                 : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
-                        } alt="" />
+                        } alt="" style={{height:"5vh", width:"auto"}}/>
             <span>Add an avatar</span>
           </label>
           <button>Sign up</button>
