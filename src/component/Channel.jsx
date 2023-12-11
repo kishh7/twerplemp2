@@ -1,127 +1,116 @@
-import React from 'react'
-import { useState } from 'react';
-import { Link } from 'react-router-dom'
-import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
-import './Cha.css';
+import React, { useState } from 'react';
+import './Cha.css'; // Your CSS file for additional styling
+import choox from '../img/choox.jpg';
 import ReactPlayer from 'react-player';
-import Chatbot from './Chatbot';
 import Navigation from './Navigation/Navigation';
+import { Link } from 'react-router-dom';
 
+const Profile = () => {
+  const [isEditing, setEditing] = useState(false);
+  const [name, setName] = useState('Ann Cruz');
+  const [about, setAbout] = useState('hi im kind');
+  const [followers, setFollowers] = useState(100);
+  const [following, setFollowing] = useState(50);
+  const [profilePic, setProfilePic] = useState('url_to_profile_pic');
+  const videoURLs = [
+    'https://www.youtube.com/shorts/uWzrcI5ikyA',
+    'https://www.youtube.com/shorts/hIATL_W36m4',
+    'https://www.youtube.com/shorts/IqLsdqYaRSk',
+    'https://www.youtube.com/shorts/AlxAMCGwxeE'
+    
+  ];
 
-const Channel = () => {
-  
+  const handleEditProfile = () => {
+    setEditing(true);
+  };
+
+  const handleSaveProfile = () => {
+    setEditing(false);
+  };
+
+  const handleProfilePicChange = (event) => {
+    const file = event.target.files[0];
+    const temporaryProfilePicURL = URL.createObjectURL(file);
+    setProfilePic(temporaryProfilePicURL);
+  };
+
   return (
     <>
     <Navigation/>
-    <div>
-    <div className="text-right mt-3 mr-3">
-    <Link to="/Streamingtool" className="streaming-link">Streaming Tool</Link>
-
-    <Chatbot/>
-    <div className="gradient-custom-2" >
-      <MDBContainer className="py-5 h-100">
-        <MDBRow className="justify-content-center align-items-center h-100">
-          <MDBCol lg="9" xl="7">
-            <MDBCard>
-              <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '200px' }}>
-                <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
-                <MDBCardImage src="https://static-cdn.jtvnw.net/jtv_user_pictures/98ccac37-119c-4534-aba9-87c9b7d2c84f-profile_image-300x300.png"
-                    alt="" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
+  
+    <div className="profile-container">
+    <div className="containe-4">
+  <div style={{ marginTop: "5px" , display: "flex", justifyContent: "flex-end",  padding: "10px"}}>
+  <Link
+      to="/Streamingtool" 
+      className="streaming-1"
+    >
+      Streaming Tool
+    </Link>
+  </div>
+</div>
+      <div className="profile-info">
+        <div className="profile-header">
+          <img className="profile-pic" src={profilePic} alt="" />
+          <div className="profile-header-details">
+          <h2 style={{textAlign:"center", alignItems:"center"}}>My Profile</h2>
+            <h1>{name}</h1>
+            <p>{about}</p>
+            <p>Followers: {followers}</p>
+            <p>Following: {following}</p>
+            {isEditing ? (
+              <div>
+                <label>
+                  Name:
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </label>
+                <br />
+                <label>
+                  About:
+                  <textarea
+                    value={about}
+                    onChange={(e) => setAbout(e.target.value)}
+                  ></textarea>
+                </label>
+                <br />
+                <label>
+                  Profile Picture:
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleProfilePicChange}
+                  />
+                </label>
+                <br />
+                <button style={{ padding: "8px 16px", border: "none", backgroundColor: "purple",
+       color: "white", borderRadius: "5px", cursor: "pointer"}} onClick={handleSaveProfile}>Save</button>
                 
-                  <MDBBtn outline color="dark" className="editProfileButton" style={{height: '36px', overflow: 'visible'}}>
-                    Edit profile
-                  </MDBBtn>
-                </div>
-                <div className="ms-3" style={{ marginTop: '130px' }}>
-                  <MDBTypography tag="h5">velvetfrootloop</MDBTypography>
-                  <MDBCardText>Philippines</MDBCardText>
-                </div>
               </div>
-              <div className="p-4 text-black">
-                <div className="d-flex justify-content-end text-center py-1">
-                  <div>
-                    <MDBCardText className="mb-1 h5">4</MDBCardText>
-                    <MDBCardText className="small text-muted mb-0">Videos</MDBCardText>
-                  </div>
-                  <div className="px-3">
-                    <MDBCardText className="mb-1 h5">1026</MDBCardText>
-                    <MDBCardText className="small text-muted mb-0">Followers</MDBCardText>
-                  </div>
-                  <div>
-                    <MDBCardText className="mb-1 h5">478</MDBCardText>
-                    <MDBCardText className="small text-muted mb-0">Following</MDBCardText>
-                  </div>
-                </div>
-              </div>
-              <MDBCardBody className="text-black p-4">
-                <div className="mb-5">
-                  <p className="lead fw-normal mb-1">About</p>
-                  <div className="p-4" >
-                    <MDBCardText className="font-italic mb-1">www.youtube.com/@velvetbb</MDBCardText>
-                    <MDBCardText className="font-italic mb-1">191K subscribers</MDBCardText>
-                    <MDBCardText className="font-italic mb-0">81 videos</MDBCardText>
-                    <MDBCardText className="font-italic mb-0">52,010,849 views</MDBCardText>
-                    <MDBCardText className="font-italic mb-0">Joined 6 Oct 2019</MDBCardText>
-                  </div>
-                </div>
-                <div className="d-flex justify-content-between align-items-center mb-4">
-                  <MDBCardText className="lead fw-normal mb-0">Recent Videos</MDBCardText>
-                </div>
-                <MDBRow>
-                  <MDBCol className="mb-2">
-                  <div>
-      <ReactPlayer
-        url="https://www.youtube.com/shorts/uWzrcI5ikyA"
-        width="100%"
-        height="auto"
-        controls={true}
-      />
-    </div>
-                  </MDBCol>
-                  
-                  <MDBCol className="mb-2">
-                  <div>
-      <ReactPlayer
-        url="https://www.youtube.com/shorts/hIATL_W36m4"
-        width="100%"
-        height="auto"
-        controls={true}
-      />
-    </div>
-           </MDBCol>
-      </MDBRow>
-                <MDBRow className="g-2">
-                  <MDBCol className="mb-2">
-                  <div>
-      <ReactPlayer
-        url="https://www.youtube.com/shorts/IqLsdqYaRSk"
-        width="100%"
-        height="auto"
-        controls={true}
-      />
-    </div>
-                  </MDBCol>
-                  <MDBCol className="mb-2">
-                  <div>
-      <ReactPlayer
-        url="https://www.youtube.com/shorts/AlxAMCGwxeE"
-        width="100%"
-        height="auto"
-        controls={true}
-      />
-    </div>
-                  </MDBCol>
-                </MDBRow>
-              </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
-    </div>
-    </div>
+            ) : (
+              <button className="button-2" onClick={handleEditProfile}>Edit Profile</button>
+            )}
+          </div>
+        </div>
+        <div className="video-container">
+          <h2>Videos</h2>
+          {videoURLs.map((url, index) => (
+            <ReactPlayer
+              key={index}
+              className="react-player"
+              url={url}
+              controls={true}
+            />
+          ))}
+        </div>
+      </div>
     </div>
     </>
   );
-}
+};
 
-export default Channel;
+export default Profile;
+
