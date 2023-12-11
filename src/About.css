@@ -18,7 +18,7 @@ body {
   }
   
   .heading1 span {
-    color: #BC6FF1; 
+    color: violet; 
   }
   
   .about {
@@ -49,10 +49,6 @@ body {
     font-size: 1.5em;
     margin-top: 20px;
   }
+
   
-  p {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #333;
-  }
   

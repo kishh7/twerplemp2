@@ -20,6 +20,7 @@ import Signup from './Signup';
 import Homepage from '../src/component/Homepage';
 import Streamingtool from './Streamingtool';
 import Login from './Login';
+import Privacy from './component/Privacy';
 
 
 
@@ -35,6 +36,7 @@ ReactDOM.render(
     <Route path='/Login' element={<Login/>}/>
     <Route path='/Feed' element={<Feed/>}/>
     <Route path='/About' element={<About/>}/>
+    <Route path='/Privacy' element={<Privacy/>}/>
     <Route path='/Channel' element={<Channel/>}/>
     <Route path='/Streamingtool' element={<Streamingtool/>}/>
     <Route path='/Page1' element={<Page1/>}/>

@@ -17,9 +17,10 @@ const About = () => {
           <img src={twerplelogo}/>
         </div>
       </div>
+      
       <div className="col-md-6">
         <h3>Twerple</h3>
-        <p>welcome home. Watch what you love, connect with streamers, and chat with tons of communities ThumbsUp
+        <p style={{ fontSize: "1em", lineHeight: "1.5", color: "#333"}}>welcome home. Watch what you love, connect with streamers, and chat with tons of communities ThumbsUp
           <br/><br/>
           Twerple is where hundreds of people come together live every day to chat, interact, and make their own entertainment together.
           <br/><br/>
@@ -38,7 +39,6 @@ const About = () => {
     </div>
     </div>
     <Footer/>
-
     </>
   )
 }
