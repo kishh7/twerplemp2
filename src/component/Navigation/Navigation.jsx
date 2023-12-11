@@ -3,7 +3,9 @@ import { CNavbar, CContainer, CNavbarBrand,  CNavbarToggler,  CCollapse, CNavbar
 CNavLink, CForm, CFormInput,CButton, CDropdown,  CDropdownToggle, CDropdownMenu, CDropdownItem, } from '@coreui/react';
 import Button from '@mui/material/Button';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import LogoutIcon from '@mui/icons-material/Logout';
 import './Navigation.css';
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
     const [visible, setVisible] = useState(false)
@@ -11,7 +13,7 @@ const Navigation = () => {
         <>
         <CNavbar expand="lg" colorScheme="dark" className="navbar">
           <CContainer fluid>
-            <CNavbarBrand href="/" className="logo">Twer<span>p/e</span></CNavbarBrand>
+            <CNavbarBrand href="/Feed" className="logo">Twer<span>p/e</span></CNavbarBrand>
             <CNavbarToggler
               aria-label="Toggle navigation"
               aria-expanded={visible}
@@ -45,7 +47,7 @@ const Navigation = () => {
                 <CButton type="submit" color="light"
                  variant="outline" className="ms-2"> Search </CButton>
                   <div className="login" style={{marginLeft: "5px"}}>
-     <Button variant="outlined" href="/RegistrationForm">  LogIn </Button>
+    <Link to="/"><LogoutIcon style={{marginLeft:"5px", fontSize:"35px", color:"purple"}}/></Link>
              </div>
          </div>
        

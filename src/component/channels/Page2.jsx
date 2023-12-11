@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import './Channels.css';
 import SideNav from '../Sidenav';
+import Navigation from '../Navigation/Navigation';
 
 
 
@@ -22,6 +23,8 @@ const Page2 = () => {
     
   ];
   return (
+    <>
+    <Navigation/>
     <div className="player-wrapper">
       <SideNav/> <h2>Tims Streaming <button onClick={handleSubscription}>
         {subscribed ? 'Subscribed ✔' : 'Subscribe'}
@@ -37,6 +40,7 @@ const Page2 = () => {
     ))}
     
   </div>
+  </>
 );
 };
 

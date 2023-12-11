@@ -5,11 +5,14 @@ import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCar
 import './Cha.css';
 import ReactPlayer from 'react-player';
 import Chatbot from './Chatbot';
+import Navigation from './Navigation/Navigation';
 
 
 const Channel = () => {
   
   return (
+    <>
+    <Navigation/>
     <div>
     <div className="text-right mt-3 mr-3">
     <Link to="/Streamingtool" className="streaming-link">Streaming Tool</Link>
@@ -117,6 +120,7 @@ const Channel = () => {
     </div>
     </div>
     </div>
+    </>
   );
 }
 

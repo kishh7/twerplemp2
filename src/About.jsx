@@ -1,9 +1,12 @@
 import React from 'react'
 import twerplelogo from './img/twerple logo.png';
 import './About.css';
+import Navigation from './component/Navigation/Navigation';
 
 const About = () => {
   return (
+    <>
+    <Navigation/>
     <div className="about" id="about">
     <div className="container">
       <div className="heading1">About <span>Us</span></div>
@@ -33,7 +36,7 @@ const About = () => {
 
     </div>
     </div>
-    
+    </>
   )
 }
 

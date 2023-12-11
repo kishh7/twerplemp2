@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import './Channels.css';
 import SideNav from '../Sidenav';
+import Navigation from '../Navigation/Navigation';
 
 const Page3 = () => {
   const [subscribed, setSubscribed] = useState(false);
@@ -19,6 +20,8 @@ const Page3 = () => {
     
   ];
   return (
+    <>
+    <Navigation/>
     <div className="player-wrapper">
      <SideNav/> <h2>Kuku Streaming <button onClick={handleSubscription}>
         {subscribed ? 'Subscribed ✔' : 'Subscribe'}
@@ -34,6 +37,7 @@ const Page3 = () => {
     ))}
     
   </div>
+  </>
 );
 };
 export default Page3;

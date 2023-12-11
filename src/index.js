@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navigation from './component/Navigation/Navigation';
 import Feed from './component/Feed';
 import Channel from './component/Channel';
 import About from './About';
@@ -26,16 +25,14 @@ import Login from './Login';
 
 ReactDOM.render(
   <Router>
-    <Navigation/>
     
     <Routes>
-
+    <Route path='/' element={<Login/>}/>
+    <Route path='/Signup' element={<Signup/>}/>
     <Route path='/Feed' element={<Feed/>}/>
     <Route path='/About' element={<About/>}/>
     <Route path='/Channel' element={<Channel/>}/>
     <Route path='/Streamingtool' element={<Streamingtool/>}/>
-    <Route path='/' element={<Login/>}/>
-    <Route path='/Signup' element={<Signup/>}/>
     <Route path='/Page1' element={<Page1/>}/>
     <Route path='/Page2' element={<Page2/>}/>
     <Route path='/Page3' element={<Page3/>}/>

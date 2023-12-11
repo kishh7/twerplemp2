@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import './Channels.css';
 import SideNav from '../Sidenav';
+import Navigation from '../Navigation/Navigation';
 
 const Page10 = () => {
   const [subscribed, setSubscribed] = useState(false);
@@ -18,6 +19,8 @@ const Page10 = () => {
     'https://www.youtube.com/watch?v=RtL2aFJ9PFo',
   ];
   return (
+    <>
+    <Navigation/>
     <div className="player-wrapper">
     <SideNav/>  <h2>Dogie Streaming <button onClick={handleSubscription}>
         {subscribed ? 'Subscribed ✔' : 'Subscribe'}
@@ -33,6 +36,7 @@ const Page10 = () => {
     ))}
     
   </div>
+  </>
 );
 };
 

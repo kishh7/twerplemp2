@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Stream.css'; 
+import Navigation from '../src/component/Navigation/Navigation';
 
 const Streamingtool = () => {
   const [stream, setStream] = useState(null);
@@ -26,6 +27,8 @@ const Streamingtool = () => {
   };
 
   return (
+    <>
+    <Navigation/>
     <div className="streaming-tool-container">
       <div className="button-container">
         <button onClick={startStreaming}>Stream Now!</button>
@@ -35,6 +38,7 @@ const Streamingtool = () => {
         <video ref={videoRef} className="video-element" autoPlay muted></video>
       </div>
     </div>
+    </>
   );
 };
 

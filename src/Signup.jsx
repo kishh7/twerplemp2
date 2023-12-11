@@ -56,7 +56,10 @@ const Signup = () => {
     return (
       <div className="formContainerfor">
       <div className="formWrapper">
-        <span className="logo">Sign up</span>
+        <span className="logo" style={{ color: "black",
+      fontWeight: "bold",
+      fontSize: "24px"
+}}>Sign up</span>
         <span className="title">Register</span>
         <form onSubmit={handleSubmit}>
         <input id='displayName' onChange={handleInput} required type="text" placeholder="display name" />
@@ -80,7 +83,7 @@ const Signup = () => {
           {loading && "Uploading and compressing the image please wait..."}
           {err && <span>Something went wrong</span>}
         </form>
-        <p>
+        <p style={{ color:"white",fontSize: "12px",marginTop: "10px"}}>
           You do have an account? <Link to="/" style={{color:"black"}}>Login</Link>
         </p>
       </div>
