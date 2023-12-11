@@ -1,0 +1,72 @@
+.formContainer {
+    background-color: #52057B;
+    height: 100vh;
+    display: flex;
+    background-image: url('../img/imgbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    
+  }
+  .whiteText {
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: purple;
+    animation: colorChange 3s linear infinite; 
+     cursor: pointer;
+    font-size: 180px;
+    padding-left: 100px;
+    
+
+    }
+
+.h1koto{
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: white;
+    animation: colorChange 3s linear infinite; 
+    cursor: pointer;
+    font-size: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ilalagay ito sa itaas */
+    align-items: center; 
+    text-align: start;
+    margin-top: 10px;
+    padding-right: 250px;
+}
+
+@keyframes colorChange {
+    0% {
+      color: purple; 
+    }
+    50% {
+      color: white; 
+    }
+    100% {
+      color: blue; 
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .whiteText {
+      font-size: 100px;
+      padding-left: 50px; 
+    }
+  
+    .h1koto {
+      font-size: 150px;
+      padding-right: 100px; 
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .whiteText {
+      font-size: 80px;
+      padding-left: 30px;
+    }
+  
+    .h1koto {
+      font-size: 120px;
+      padding-right: 50px;
+    }
+  }

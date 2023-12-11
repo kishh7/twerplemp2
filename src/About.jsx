@@ -2,6 +2,7 @@ import React from 'react'
 import twerplelogo from './img/twerple logo.png';
 import './About.css';
 import Navigation from './component/Navigation/Navigation';
+import Footer from './component/Footer';
 
 const About = () => {
   return (
@@ -20,7 +21,7 @@ const About = () => {
         <h3>Twerple</h3>
         <p>welcome home. Watch what you love, connect with streamers, and chat with tons of communities ThumbsUp
           <br/><br/>
-          Twerple is where millions of people come together live every day to chat, interact, and make their own entertainment together.
+          Twerple is where hundreds of people come together live every day to chat, interact, and make their own entertainment together.
           <br/><br/>
           Chat, laugh, and bond together. It’s like sharing one couch with thousands of friends.
           <br/><br/>
@@ -36,8 +37,10 @@ const About = () => {
 
     </div>
     </div>
+    <Footer/>
+
     </>
   )
 }
 
-export default About
+export default About;

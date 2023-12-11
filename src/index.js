@@ -17,8 +17,10 @@ import Page9 from './component/channels/Page9';
 import Page10 from './component/channels/Page10';
 import Pagefour from './component/channels/Pagefour';
 import Signup from './Signup';
+import Homepage from '../src/component/Homepage';
 import Streamingtool from './Streamingtool';
 import Login from './Login';
+
 
 
 
@@ -27,7 +29,9 @@ ReactDOM.render(
   <Router>
     
     <Routes>
-    <Route path='/' element={<Login/>}/>
+
+    <Route path='/' element={<Homepage/>}/>
+    <Route path='/Login' element={<Login/>}/>
     <Route path='/Signup' element={<Signup/>}/>
     <Route path='/Feed' element={<Feed/>}/>
     <Route path='/About' element={<About/>}/>

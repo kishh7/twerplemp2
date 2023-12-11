@@ -84,7 +84,7 @@ const Signup = () => {
           {err && <span>Something went wrong</span>}
         </form>
         <p style={{ color:"white",fontSize: "12px",marginTop: "10px"}}>
-          You do have an account? <Link to="/" style={{color:"black"}}>Login</Link>
+          You do have an account? <Link to="/Login" style={{color:"black"}}>Login</Link>
         </p>
       </div>
     </div>

@@ -1,0 +1,36 @@
+
+.navbar {
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+
+.loginIconLink {
+  display: flex; 
+  color: purple;
+}
+
+
+@media (max-width: 768px) {
+  
+  .navbar {
+    justify-content: space-between; 
+  }
+  .loginIconLink {
+    display: block;
+    margin-left: auto; 
+    padding: 15px; 
+  }
+  .navbar-collapse {
+    display: flex; 
+  }
+  .navbar-collapse.show {
+    display: block;
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
